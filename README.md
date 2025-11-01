@@ -1,7 +1,7 @@
 # Assignment 4 — Graph Algorithms (SCC, Topo, DAG Shortest/Longest Paths)
 ## Overview
 
-This project implements and analyzes several graph algorithms in Java, focusing on:
+#### This project implements and analyzes several graph algorithms in Java, focusing on:
 
 Tarjan’s algorithm for finding Strongly Connected Components (SCC)
 
@@ -464,7 +464,274 @@ Large.json(datasets)
 ```
 ```text
 
+= FILE: data/large.json =
 
+- Dataset 1 -
+Shortest distances:
+From 0 to 0 = 0
+From 0 to 1 = 2
+From 0 to 2 = 3
+From 0 to 3 = 3
+From 0 to 4 = 5
+From 0 to 5 = 4
+From 0 to 6 = 9
+From 0 to 7 = 6
+From 0 to 8 = 10
+From 0 to 9 = 9
+From 0 to 10 = 12
+From 0 to 11 = 10
+From 0 to 12 = 14
+From 0 to 13 = 13
+From 0 to 14 = 15
+From 0 to 15 = 15
+From 0 to 16 = 18
+From 0 to 17 = 17
+From 0 to 18 = 22
+From 0 to 19 = 19
+From 0 to 20 = 23
+From 0 to 21 = 22
+From 0 to 22 = 25
+From 0 to 23 = 23
+From 0 to 24 = 28
+Longest distances:
+From 0 to 0 = 0
+From 0 to 1 = 2
+From 0 to 2 = 3
+From 0 to 3 = 3
+From 0 to 4 = 5
+From 0 to 5 = 4
+From 0 to 6 = 9
+From 0 to 7 = 6
+From 0 to 8 = 10
+From 0 to 9 = 9
+From 0 to 10 = 12
+From 0 to 11 = 10
+From 0 to 12 = 14
+From 0 to 13 = 13
+From 0 to 14 = 15
+From 0 to 15 = 15
+From 0 to 16 = 18
+From 0 to 17 = 17
+From 0 to 18 = 22
+From 0 to 19 = 19
+From 0 to 20 = 23
+From 0 to 21 = 22
+From 0 to 22 = 25
+From 0 to 23 = 23
+From 0 to 24 = 28
+
+- Dataset 2 -
+Shortest distances:
+From 0 to 0 = 0
+From 0 to 1 = 1
+From 0 to 2 = 2
+From 0 to 3 = 4
+From 0 to 4 = 6
+From 0 to 5 = 9
+From 0 to 6 = 10
+From 0 to 7 = 12
+From 0 to 8 = 14
+From 0 to 9 = 17
+From 0 to 10 = 19
+From 0 to 11 = 20
+From 0 to 12 = 23
+From 0 to 13 = 25
+From 0 to 14 = 27
+From 0 to 15 = 30
+From 0 to 16 = 31
+From 0 to 17 = 33
+From 0 to 18 = 34
+From 0 to 19 = 36
+From 0 to 20 = 38
+From 0 to 21 = 41
+From 0 to 22 = 42
+From 0 to 23 = 44
+From 0 to 24 = 47
+From 0 to 25 = 48
+From 0 to 26 = 50
+From 0 to 27 = 53
+From 0 to 28 = ∞
+From 0 to 29 = ∞
+Longest distances:
+From 0 to 0 = 0
+From 0 to 1 = 1
+From 0 to 2 = 2
+From 0 to 3 = 4
+From 0 to 4 = 6
+From 0 to 5 = 9
+From 0 to 6 = 10
+From 0 to 7 = 12
+From 0 to 8 = 14
+From 0 to 9 = 17
+From 0 to 10 = 19
+From 0 to 11 = 20
+From 0 to 12 = 23
+From 0 to 13 = 25
+From 0 to 14 = 27
+From 0 to 15 = 30
+From 0 to 16 = 31
+From 0 to 17 = 33
+From 0 to 18 = 34
+From 0 to 19 = 36
+From 0 to 20 = 38
+From 0 to 21 = 41
+From 0 to 22 = 42
+From 0 to 23 = 44
+From 0 to 24 = 47
+From 0 to 25 = 48
+From 0 to 26 = 50
+From 0 to 27 = 53
+From 0 to 28 = ∞
+From 0 to 29 = ∞
+
+- Dataset 3 -
+Shortest distances:
+From 0 to 0 = 0
+From 0 to 1 = 2
+From 0 to 2 = 1
+From 0 to 3 = 4
+From 0 to 4 = 5
+From 0 to 5 = 5
+From 0 to 6 = 5
+From 0 to 7 = 7
+From 0 to 8 = 6
+From 0 to 9 = 8
+From 0 to 10 = 11
+From 0 to 11 = 7
+From 0 to 12 = 10
+From 0 to 13 = 14
+From 0 to 14 = 9
+From 0 to 15 = 13
+From 0 to 16 = 18
+From 0 to 17 = 11
+From 0 to 18 = 16
+From 0 to 19 = 19
+From 0 to 20 = 13
+From 0 to 21 = 19
+From 0 to 22 = 21
+From 0 to 23 = 16
+From 0 to 24 = 20
+From 0 to 25 = 23
+From 0 to 26 = 19
+From 0 to 27 = 24
+From 0 to 28 = 25
+From 0 to 29 = 22
+From 0 to 30 = 26
+From 0 to 31 = 26
+From 0 to 32 = 24
+From 0 to 33 = 29
+From 0 to 34 = 30
+From 0 to 35 = 26
+From 0 to 36 = 30
+From 0 to 37 = 32
+From 0 to 38 = 29
+From 0 to 39 = ∞
+Longest distances:
+From 0 to 0 = 0
+From 0 to 1 = 2
+From 0 to 2 = 1
+From 0 to 3 = 4
+From 0 to 4 = 5
+From 0 to 5 = 5
+From 0 to 6 = 5
+From 0 to 7 = 7
+From 0 to 8 = 6
+From 0 to 9 = 8
+From 0 to 10 = 11
+From 0 to 11 = 7
+From 0 to 12 = 10
+From 0 to 13 = 14
+From 0 to 14 = 9
+From 0 to 15 = 13
+From 0 to 16 = 18
+From 0 to 17 = 11
+From 0 to 18 = 16
+From 0 to 19 = 19
+From 0 to 20 = 13
+From 0 to 21 = 19
+From 0 to 22 = 21
+From 0 to 23 = 16
+From 0 to 24 = 20
+From 0 to 25 = 23
+From 0 to 26 = 19
+From 0 to 27 = 24
+From 0 to 28 = 25
+From 0 to 29 = 22
+From 0 to 30 = 26
+From 0 to 31 = 26
+From 0 to 32 = 24
+From 0 to 33 = 29
+From 0 to 34 = 30
+From 0 to 35 = 26
+From 0 to 36 = 30
+From 0 to 37 = 32
+From 0 to 38 = 29
+From 0 to 39 = ∞
+```
+## Time Complexity Analysis
+### 1. Tarjan’s SCC Algorithm
+
+Purpose: Finds all Strongly Connected Components (SCCs) in a directed graph.
+
+Time Complexity: O(V + E)
+
+Each vertex and edge is visited exactly once during DFS.
+
+Space Complexity: O(V) (for recursion stack, discovery times, and low-link arrays)
+
+Efficient even for large cyclic graphs.
+
+### 2. Kahn’s Topological Sort
+
+Purpose: Finds a topological order of nodes in a Directed Acyclic Graph (DAG).
+
+Time Complexity: O(V + E)
+
+Each node is enqueued and dequeued once, and every edge is processed once.
+
+Space Complexity: O(V) (for indegree array and queue)
+
+Works only on acyclic graphs — if cycles exist, the sort cannot complete.
+
+### 3. DAG Shortest Path
+
+Purpose: Finds the shortest distance from a source node in a DAG.
+
+Time Complexity: O(V + E)
+
+Uses topological order; each edge is relaxed exactly once.
+
+Space Complexity: O(V)
+
+Much faster than Dijkstra or Bellman-Ford, but only valid for DAGs.
+
+### 4. DAG Longest Path
+
+Purpose: Finds the longest distance from a source node in a DAG.
+
+Time Complexity: O(V + E)
+
+Same process as shortest path, but uses max instead of min in relaxation.
+
+Space Complexity: O(V)
+
+Useful for scheduling or dependency analysis where longest chain matters.
+
+## Conclusion
+
+This project showed how different graph structures affect algorithm performance and behavior.
+Algorithms like Tarjan’s SCC work best for graphs with many cycles, while Topological Sort and DAG Shortest/Longest Paths only work for acyclic graphs (DAGs).
+Sparse graphs are faster to process but may have unreachable nodes, while dense graphs take more time but give more complete results.
+
+#### In general:
+
+Use Tarjan’s SCC to simplify cyclic graphs into smaller acyclic components.
+
+Use Topological Sorting and DAG Path algorithms for structured dependency or scheduling problems.
+
+The overall performance grows almost linearly with graph size (O(V + E)), making these algorithms efficient for most cases.
+
+The study helps understand when and why to use each algorithm and shows that graph structure (cycles, density, and connectivity) plays a key role in both speed and correctness of results.
 
 
 
