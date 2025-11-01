@@ -76,6 +76,36 @@ Dense graphs (many edges) give more complete results but need more time.
 
 SCCs make graphs easier to understand before running DAG algorithms — especially when cycles exist.
 
+### Empirical Validation
+
+The algorithms were tested on three datasets — small, medium, and large — located in the /data folder.
+Each dataset contains multiple directed graphs with different sizes, densities, and structures (cyclic and acyclic).
+This setup allows us to test both algorithm correctness and performance under various conditions.
+
+#### Testing Process
+
+The main validation is implemented in the TestMain.java file.
+It automatically loads all datasets and runs the following algorithms on each graph:
+
+Tarjan’s SCC (for finding strongly connected components)
+
+Kahn’s Topological Sort (for DAG order)
+
+Shortest and Longest Path algorithms (for DAGs)
+
+Each dataset output includes shortest and longest distances from a given source node, printed to the console.
+Unreachable nodes are shown as ∞ (infinity), which confirms correct algorithm behavior for disconnected parts of graphs.
+
+#### Results Summary
+
+Small graphs (6–10 nodes): All results were computed instantly, confirming algorithm correctness.
+
+Medium graphs (10–20 nodes): Mixed structures with several SCCs worked correctly; few nodes remained unreachable (∞).
+
+Large graphs (20–50 nodes): Performance remained efficient — runtime increased slightly but still linear with respect to nodes and edges.
+
+Results matched theoretical time complexity (O(V + E)) for all implemented algorithms.
+
 ## Testing
 
 All test datasets stored under /data/
